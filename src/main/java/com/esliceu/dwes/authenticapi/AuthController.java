@@ -20,7 +20,11 @@ public class AuthController {
         Authenticate authenticate = new Authenticate();
         authenticate.setUser(user);
 
-        if (user != null && user.getUserId() != null && user.getPassword() != null){
+        if (user != null &&
+                user.getUserId() != null &&
+                user.getPassword() != null &&
+                user.getPassword().equals(user.getUserId())
+                ){
 
 
             authenticate.getUser().getRols().add(Rol.admin);
