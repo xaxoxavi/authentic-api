@@ -1,8 +1,13 @@
 package com.esliceu.dwes.authenticapi.domain;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 import java.util.HashSet;
 import java.util.Set;
 
+@Component
+@Scope("prototype")
 public class User {
 
     private String userId;
