@@ -1,12 +1,11 @@
 package com.esliceu.dwes.authenticapi.repository;
 
 import com.esliceu.dwes.authenticapi.domain.User;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 @Repository
 public class UserRepositoryImpl implements UserRepository {
@@ -20,8 +19,8 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public Set<User> findAll() {
-        return (Set<User>) userMap.values();
+    public Collection<User> findAll() {
+        return  userMap.values();
     }
 
     @Override

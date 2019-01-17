@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
@@ -53,7 +54,7 @@ public class AuthController {
 
 
     @RequestMapping(value = "/users",method = RequestMethod.GET)
-    public Set<User> getAllUsers(){
+    public Collection<User> getAllUsers(){
         return userRepository.findAll();
     }
 }
